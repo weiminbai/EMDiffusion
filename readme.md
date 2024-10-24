@@ -1,18 +1,18 @@
 # An Expectation-Maximization Algorithm for Training Clean Diffusion Models from Corrupted Observations (NeurIPS 2024)
 
 ## Abstract
-In this work, we extend diffusion solvers to efficiently handle general noisy (non)linear inverse problems via the approximation of the posterior sampling. 
-Interestingly, the resulting posterior sampling scheme is a blended version of the diffusion sampling with the manifold constrained gradient without strict measurement consistency projection step, yielding more desirable generative path in noisy settings compared to the previous studies.
+In this work, we propose EMDiffusion, an expectation-maximization (EM) approach to train diffusion models from corrupted observations. Our method alternates between reconstructing clean images from corrupted data using a known diffusion model (E-step) and refining diffusion model weights based on these reconstructions (M-step).
+This iterative process leads the learned diffusion model to gradually converge to the true clean data distribution.on step, yielding more desirable generative path in noisy settings compared to the previous studies.
 
 ![cover-img](./data/teaser.png)
 
-### Environment
+## Environment
 
 Since the E-step is the same as [DPS](https://github.com/DPS2022/diffusion-posterior-sampling), so our required environment is the same as DPS, which is simple and easy to set.
 
 The difference is that we adopt the Accelerate package for distributed training, you could easily install one that matches your machine. Or you can simply delete it in the code, then train diffusion with one GPU.
 
-### Getting started
+## Getting started
 
 We perform E-steps and M-steps iteratively, specifically:
 
