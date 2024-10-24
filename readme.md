@@ -35,8 +35,8 @@ If you find our work interesting, please consider citing
 bai2024expectation,
 title={An Expectation-Maximization Algorithm for Training Clean Diffusion Models from Corrupted Observations},
 author={Weimin Bai and Yifei Wang and Wenzheng Chen and He Sun},
-booktitle={The Eleventh International Conference on Learning Representations },
+booktitle={Thirty-Eighth Annual Conference on Neural Information Processing Systems},
 year={2024},
-url={https://arxiv.org/abs/2407.01014}
+url={https://neurips.cc/virtual/2024/poster/93958}
 }
 ```
