@@ -1,0 +1,16 @@
+conditioning:
+  method: ps
+  params:
+    scale: 3
+
+data:
+  name: cifar
+  root: /data
+
+measurement:
+  operator:
+    name: noise
+  
+  noise: 
+    name: gaussian
+    sigma: 0.2

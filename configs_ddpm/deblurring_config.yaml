@@ -1,0 +1,18 @@
+conditioning:
+  method: ps
+  params:
+    scale: 1
+
+data:
+  name: cifar
+  root: /data
+
+measurement:
+  operator:
+    name: gaussian_blur
+    kernel_size: 9
+    intensity: 2
+  
+  noise: 
+    name: gaussian
+    sigma: 0.0

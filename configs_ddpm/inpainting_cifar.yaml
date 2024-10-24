@@ -1,0 +1,22 @@
+conditioning:
+  method: ps
+  params:
+    scale: 7
+
+data:
+  name: cifar
+  root: /data
+
+measurement:
+  operator:
+    name: inpainting
+  mask_opt:
+    mask_type: random
+    # mask_len_range: !!python/tuple [128, 129]  # for box
+    mask_prob_range: !!python/tuple [0.5, 0.5]  # for random
+    image_size: 32
+
+
+  noise:
+    name: gaussian
+    sigma: 0

@@ -1,0 +1,22 @@
+conditioning:
+  method: ps
+  params:
+    scale: 32
+
+data:
+  name: FFHQ
+  root: /data
+
+measurement:
+  operator:
+    name: inpainting
+  mask_opt:
+    mask_type: box
+    mask_len_range: !!python/tuple [120, 130]  # for box
+    # mask_prob_range: !!python/tuple [0.2, 0.8]  # for random
+    image_size: 256
+
+
+  noise:
+    name: gaussian
+    sigma: 0
